@@ -3,6 +3,10 @@ Project Overview
 
 The Smart Agriculture Website is an AI-assisted platform designed to empower farmers by detecting crop pests and diseases at an early stage. It provides actionable solutions to prevent crop loss, improve yield, and promote sustainable farming practices. By combining technology, expert guidance, and real-world accessibility, this platform ensures farmers can make informed decisions to protect their crops effectively.
 
+
+<img width="1460" height="906" alt="image" src="https://github.com/user-attachments/assets/b479d213-1333-44b6-bcf2-8adeef207499" />
+
+
 🔍 Key Features
 
 Pest & Disease Detection
@@ -38,6 +42,9 @@ Provides access to government and NGO-supported agricultural services.
 Volunteer & Expert Assistance
 
 Facilitates personalized guidance from local volunteers and field experts.
+
+<img width="725" height="634" alt="image" src="https://github.com/user-attachments/assets/485b9a4e-e54f-4583-9af2-f8a8743b12d7" />
+
 
 🌱 Benefits
 
