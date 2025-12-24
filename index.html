@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farmer Welfare Web App</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: url('farmer.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 500px;
+      margin-top: 30px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #2e7d32;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    p {
+      margin-top: 15px;
+      text-align: center;
+    }
+
+    a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    video {
+      margin-top: 15px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sign In Section -->
+  <section id="auth-section">
+    <h2>Sign In</h2>
+    <label for="loginEmail">Email</label>
+    <input type="email" id="loginEmail" placeholder="Enter your email" required />
+    <label for="loginPassword">Password</label>
+    <input type="password" id="loginPassword" placeholder="Enter your password" required />
+    <button onclick="signIn()">Login</button>
+    <p>Don't have an account? <a href="#" onclick="showSignup()">Sign Up here</a></p>
+  </section>
+
+  <!-- Sign Up Section -->
+  <section id="signup-section" style="display:none;">
+    <h2>Sign Up</h2>
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Your name" required />
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="Your email" required />
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Create password" required />
+    <label for="language">Preferred Language</label>
+    <select id="language" required>
+      <option value="" disabled selected>Select Language</option>
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="te">Telugu</option>
+      <!-- Add more languages if needed -->
+    </select>
+    <label for="area">Area (City/Town)</label>
+    <input type="text" id="area" placeholder="Your area" required />
+    <button onclick="signUp()">Sign Up</button>
+    <p>Already have an account? <a href="#" onclick="showLogin()">Sign In here</a></p>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard" style="display:none;">
+    <h2 id="welcomeText">Welcome, User!</h2>
+    <button onclick="openWebcam()">Crop Scanner</button>
+    <button onclick="getWeather()">Weather Alert</button>
+    <button onclick="openSchemes()">Farmer Schemes</button>
+    <button onclick="showVolunteers()">Volunteer Info</button>
+    <button onclick="openMedicine()">Plant Medicine</button>
+    <button onclick="showHelpDesk()">Help Desk</button>
+    <button onclick="logout()">Logout</button>
+
+    <video id="webcam" autoplay playsinline width="400" style="display:none;"></video>
+    <div id="output"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
